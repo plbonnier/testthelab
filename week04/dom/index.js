@@ -1,0 +1,26 @@
+console.log("document :>> ", document);
+const body = document.body;
+console.log("body :>> ", body);
+const h1 = document.createElement("h1");
+h1.innerHTML = "My App";
+h1.style.textAlign = "center";
+h1.style.fontSize = "1.5rem";
+h1.style.color = "blue";
+const img = document.createElement("img");
+img.src = "rust.png";
+img.alt = "logo";
+const p = document.createElement("p");
+p.style.fontSize = "2.5rem";
+p.style.position = "absolute";
+p.style.bottom = "-10px";
+p.style.left = "10rem";
+p.style.padding = "10px";
+p.style.background = "white";
+
+p.innerHTML = " hello rust !";
+const div = document.createElement("div");
+div.style.position = "relative";
+div.appendChild(img);
+div.appendChild(p);
+body.appendChild(h1);
+body.appendChild(div);
