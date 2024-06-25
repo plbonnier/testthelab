@@ -13,6 +13,8 @@ Révisons les fondamentaux de JavaScript, en créant une _to-do-list_
 3. On doit pouvoir ajouter une tâche en écrivant dans l'input, puis en validant avec la touche `Entrée`.
 4. On doit pouvoir cocher une tâche pour la marquer comme effectuée.
 5. Et en bonus créer un compteur pour compter le nombre des tâches non effectuées.
+6. Créer les critères d'acceptation.
+7. Créer les tests (E2E) pour la To Do List.
 
 ## Instructions de l'exercice
 
