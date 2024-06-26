@@ -2,7 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   env: {
-    basUrl: "http://127.0.0.1:5500/week07/ToDoList/index.html",
+    baseUrl: "https://preprod.backmarket.fr",
   },
   e2e: {
     setupNodeEvents(on, config) {
