@@ -14,7 +14,7 @@ module.exports = defineConfig({
       //contrôle si les rapports existants doivent être écrasés ou non lors de la génération de nouveaux rapports.
       overwrite: true,
       html: true,
-      json: false,
+      json: true,
       // Activer les captures d'écran intégrées
       embeddedScreenshots: true,
       // Activer le contenu inline (CSS, JS)
