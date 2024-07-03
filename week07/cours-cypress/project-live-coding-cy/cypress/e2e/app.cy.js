@@ -17,9 +17,6 @@ describe("template spec", () => {
   });
 
   it("check hover card product", () => {
-    cy.get(".product-card")
-      .first()
-      .trigger("mouseover")
-      .should("have.css", "transform", "none");
+    cy.get(".product-card").first().realHover({ transform: "scale(1.05)" });
   });
 });
