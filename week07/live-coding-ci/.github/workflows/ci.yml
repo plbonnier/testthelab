@@ -1,0 +1,8 @@
+name: First CI
+on:
+  push:
+    branches: ["main"]
+  workflow_dispatch:
+jobs:
+  Firts-test-with-cypress:
+    runs-on: ubuntu-latest
