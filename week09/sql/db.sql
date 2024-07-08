@@ -1,4 +1,4 @@
-DROP table user if not exist;
+DROP table user if not exists;
 CREATE TABLE user (
     id INTEGER PRIMARY KEY AUTO_INCREMENT,
     firstname VARCHAR(100) NOT NULL,
