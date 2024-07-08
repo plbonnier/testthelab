@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="Mocha Tests" time="2.136" tests="3" failures="0">
+  <testsuite name="Root Suite" timestamp="2024-07-03T14:17:16" tests="0" file="cypress/e2e/app.cy.js" time="0.000" failures="0">
+  </testsuite>
+  <testsuite name="template spec" timestamp="2024-07-03T14:17:16" tests="3" time="2.133" failures="0">
+    <testcase name="template spec test home page " time="1.189" classname="test home page ">
+    </testcase>
+    <testcase name="template spec clicked element &amp; increment vues" time="0.132" classname="clicked element &amp; increment vues">
+    </testcase>
+    <testcase name="template spec check hover card product" time="0.060" classname="check hover card product">
+    </testcase>
+  </testsuite>
+</testsuites>
