@@ -1,0 +1,8 @@
+# Mon Dockerfile
+FROM node:alpine3.12
+USER node
+WORKDIR /home/node
+COPY package.json .
+RUN npm install
+COPY . .
+CMD [ "npm", "start" ]
