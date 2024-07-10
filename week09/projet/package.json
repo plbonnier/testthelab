@@ -1,0 +1,27 @@
+{
+  "name": "template-fullstack",
+  "version": "4.2.0",
+  "description": "project template for the React-Express-MySQL cursus in Wild Code School",
+  "homepage": "https://github.com/wildcodeschool/js-template-fullstack#readme",
+  "bugs": {
+    "url": "https://github.com/wildcodeschool/js-template-fullstack/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wildcodeschool/js-template-fullstack.git"
+  },
+  "scripts": {
+    "db:migrate": "cd ./backend && node migrate.js",
+    "dev-front": "cross-env-shell \"cd ./frontend && npm run dev\"",
+    "dev-back": "cross-env-shell \"cd ./backend && npm run dev\""
+  },
+  "keywords": [],
+  "author": "Wild Code School",
+  "license": "MIT",
+  "devDependencies": {
+    "concurrently": "^8.2.0",
+    "cross-env": "^7.0.3",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.2.3"
+  }
+}
