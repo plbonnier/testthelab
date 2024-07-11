@@ -22,6 +22,7 @@
     "concurrently": "^8.2.0",
     "cross-env": "^7.0.3",
     "husky": "^8.0.3",
-    "lint-staged": "^13.2.3"
+    "lint-staged": "^13.2.3",
+    "newman-reporter-htmlextra": "^1.23.1"
   }
 }

@@ -72,6 +72,7 @@ const getUserByEmail = async (req, res) => {
 const getUserById = async (req, res) => {
   try {
     const userId = req.payload;
+    console.log(userId)
     const [user] = await tables.user.getUserById(userId);
     if (user.length) {
       delete user[0].hashedPassword;

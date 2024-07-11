@@ -31,7 +31,7 @@ export default function NavBarYoussef({ isOpen, setOpen }) {
         A propos
       </NavLink>
       <NavLink
-        onClick={() => setOpen((prev) => !prev)}
+
         className={({ isActive }) => (isActive ? activeLink : inactiveLink)}
         to="/contact"
       >

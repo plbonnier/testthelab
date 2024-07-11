@@ -2,7 +2,9 @@
   "scripts": {
     "dev": "vite --host",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "cy:open": "cypress open",
+    "cy:run": "cypress run"
   },
   "dependencies": {
     "@emailjs/browser": "^4.3.3",
@@ -35,6 +37,8 @@
   "devDependencies": {
     "@vitejs/plugin-react": "^4.0.3",
     "autoprefixer": "^10.4.18",
+    "cypress": "^13.13.0",
+    "cypress-mochawesome-reporter": "^3.8.2",
     "eslint": "^8.46.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.9.0",
@@ -51,5 +55,12 @@
   "lint-staged": {
     "*.{html,scss,css}": "prettier --check",
     "*.{jsx,js}": "eslint"
-  }
+  },
+  "name": "frontend",
+  "version": "1.0.0",
+  "main": "postcss.config.js",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
