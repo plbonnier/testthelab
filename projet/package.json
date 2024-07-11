@@ -13,7 +13,8 @@
   "scripts": {
     "db:migrate": "cd ./backend && node migrate.js",
     "dev-front": "cross-env-shell \"cd ./frontend && npm run dev\"",
-    "dev-back": "cross-env-shell \"cd ./backend && npm run dev\""
+    "dev-back": "cross-env-shell \"cd ./backend && npm run dev\"",
+    "cy:run": "cypress run"
   },
   "keywords": [],
   "author": "Wild Code School",
