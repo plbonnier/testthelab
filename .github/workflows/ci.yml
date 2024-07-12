@@ -11,11 +11,13 @@ jobs:
         run: |
           npm i
           npm i cross-env
-          npm run dev-front
-          npm run dev-back
           cd backend
           npm i
           cd ..
           cd frontend
           npm i
+          cd ..
+          npm run dev-front
+          npm run dev-back
+          cd frontend
           npm run cy:run         
