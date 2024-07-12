@@ -28,7 +28,7 @@ jobs:
           cd frontend
           npm i
           cd ..
-          npm run dev-front
-          npm run dev-back
+          nohup npm run dev-back > backend.log 2>&1 &
+          nohup npm run dev-front > frontend.log 2>&1 &
           cd frontend
           npm run cy:run
