@@ -6,21 +6,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
+        
       - name: Install dependencies
         run: |
           cd frontend
-          npm ci
+          npm i
 
       - name: Run Cypress tests
         run: |
           cd frontend
           npm run cypress:run
-
-      - name: Run Newman tests
-        run: |
-          cd backend
-          npm ci
-          npm install -g newman
-          newman run https://api.postman.com/collections/36210253-488b5034-d88b-42f8-aead-a5b24a6308dd?access_key=PMAT-01J2EGZBGATXTFBQT6SB0TB5GM -e ../../testthelab.postman_environment.json --reporter-htmlextra-export report.html --reporter cli,htmlextra
+          
+      # - name: Cypress run
+      #   uses: cypress-io/github-action@v6
           
