@@ -1,23 +1,36 @@
 name: End-to-end tests
 on: push
+
+env:
+  APP_HOST: $.env.APP_HOST
+  APP_PORT: $.env.APP_PORT
+  DB_HOST: $.env.DB_HOST
+  DB_NAME: $.env.DB_NAME
+  DB_PASSWORD: $.env.DB_PASSWORD
+  DB_PORT: $.env.DBPORT
+  DB_USER: $.env.DB_USER
+  FRONTEND_URL: $.env.FRONTEND_URL
+  VITE_BACKEND_URL: $.env.URL_BACKEND
 jobs:
   cypress-run:
     runs-on: ubuntu-22.04
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        
+
       - name: Install dependencies
         run: |
-          npm i
-          npm i cross-env
+          cd frontend
+          npm ci
+
+      - name: Run Cypress tests
+        run: |
+          cd frontend
+          npm run cypress:run
+
+      - name: Run Newman tests
+        run: |
           cd backend
-          npm i
-          cd ..
-          cd frontend
-          npm i
-          cd ..
-          npm run dev-back
-          npm run dev-front
-          cd frontend
-          npm run cy:run         
+          npm ci
+          npm install -g newman
+          newman run https://api.postman.com/collections/36210253-488b5034-d88b-42f8-aead-a5b24a6308dd?access_key=PMAT-01J2EGZBGATXTFBQT6SB0TB5GM -e ../../testthelab.postman_environment.json --reporter-htmlextra-export report.html --reporter cli,htmlextra
