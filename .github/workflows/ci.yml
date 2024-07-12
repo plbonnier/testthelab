@@ -8,25 +8,19 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install dependencies
-          run: |
-            cd frontend
-            npm ci
+        run: |
+          cd frontend
+          npm ci
 
-      - name: Install dependencies
-          run: |
-            cd backend
-            npm ci
+      - name: Run Cypress tests
+        run: |
+          cd frontend
+          npm run cypress:run
 
       - name: Run Newman tests
-        env:
-          NEWMAN_REPORTER_HTMLEXTRA_THEME: 'dark'
-          NEWMAN_REPORTER_HTMLEXTRA_TITLE: 'My Test Report'
-          NEWMAN_REPORTER_HTMLEXTRA_EXPORT: 'report.html'
         run: |
           cd backend
-          newman run <COLLECTION_NAME> -e <ENVIRONMENT_NAME> --reporter-htmlextra-export report.html --reporter cli,htmlextra
-
-        - name: Run Cypress tests
-          run: |
-            cd frontend
-            npm run cypress:run
+          npm ci
+          npm install -g newman
+          newman run https://api.postman.com/collections/36210253-488b5034-d88b-42f8-aead-a5b24a6308dd?access_key=PMAT-01J2EGZBGATXTFBQT6SB0TB5GM -e ../../testthelab.postman_environment.json --reporter-htmlextra-export report.html --reporter cli,htmlextra
+          
