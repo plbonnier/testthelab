@@ -10,14 +10,8 @@ jobs:
       - name: Install dependencies
         run: |
           npm i
+          npm run dev-front
+          npm run dev-back
           cd frontend
           npm i
-
-      - name: Run Cypress tests
-        run: |
-          cd frontend
-          npm run cy:run
-          
-      # - name: Cypress run
-      #   uses: cypress-io/github-action@v6
-          
+          npm run cy:run         
