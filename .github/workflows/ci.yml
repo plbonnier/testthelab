@@ -12,10 +12,10 @@ jobs:
           cd frontend
           npm i
 
-      - name: Run Cypress tests
-        run:
-          npm run cy:run
+      # - name: Run Cypress tests
+      #   run:
+      #     npm run cy:run
           
-      # - name: Cypress run
-      #   uses: cypress-io/github-action@v6
+      - name: Cypress run
+        uses: cypress-io/github-action@v6
           
