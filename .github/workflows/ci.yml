@@ -6,7 +6,27 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      # Install npm dependencies, cache them correctly
-      # and run all Cypress tests
-      - name: Cypress run
-        uses: cypress-io/github-action@v6
+
+      - name: Install dependencies
+          run: |
+            cd frontend
+            npm ci
+
+      - name: Install dependencies
+          run: |
+            cd backend
+            npm ci
+
+      - name: Run Newman tests
+        env:
+          NEWMAN_REPORTER_HTMLEXTRA_THEME: 'dark'
+          NEWMAN_REPORTER_HTMLEXTRA_TITLE: 'My Test Report'
+          NEWMAN_REPORTER_HTMLEXTRA_EXPORT: 'report.html'
+        run: |
+          cd backend
+          newman run <COLLECTION_NAME> -e <ENVIRONMENT_NAME> --reporter-htmlextra-export report.html --reporter cli,htmlextra
+
+        - name: Run Cypress tests
+          run: |
+            cd frontend
+            npm run cypress:run
