@@ -9,6 +9,7 @@ jobs:
         
       - name: Install dependencies
         run: |
+          npm i
           cd frontend
           npm i
 
